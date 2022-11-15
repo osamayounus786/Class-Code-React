@@ -52,6 +52,12 @@ function Header(){
     <div>
      <img src={IMAGE} alt="tom"/> 
      <MyButton />
+     <MyButton  />
+       <MyButton label="One" />
+      <MyButton label="Two" featured={true} />
+      <MyButton label="Three" />
+
+      <MyButton featured={true} />
      <SignUp />
      </div>
   );
