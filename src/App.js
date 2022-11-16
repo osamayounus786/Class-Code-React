@@ -62,4 +62,13 @@ function Header(){
      </div>
   );
 }
-export default Header;
+export default function SecondComp(){
+  return(
+    <div>
+
+    <p>Second Componetn</p>
+    <p>Rendering Second Component</p>
+    <Header />
+    </div>
+  )
+};
