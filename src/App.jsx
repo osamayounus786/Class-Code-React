@@ -120,15 +120,32 @@ import { useState } from 'react';
 
 // export default FavColor;
 
+// function Car(){
+//   const [brand,setBrand] = useState("Mustang");
+//   const [model,setModel] = useState(2022);
+//   const [color,setColor] = useState('Red');
+//   return(
+//     <h1>I have {brand} year {model} in {color}!</h1>
+
+//   )
+// }
+
+
+// export default Car;
+
 function Car(){
-  const [brand,setBrand] = useState("Mustang");
-  const [model,setModel] = useState(2022);
-  const [color,setColor] = useState('Red');
+  const [car,setCar] = useState({
+    brand: "Mustang",
+    model: 2022,
+    color: "Red"
+  });
+  
   return(
-    <h1>I have {brand} year {model} in {color}!</h1>
+    <h1>I have {car.brand} year {car.model} in {car.color}!!</h1>
 
   )
 }
 
 
 export default Car;
+
