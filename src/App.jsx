@@ -102,20 +102,33 @@ import './App.css';
 import { useState } from 'react';
 
 
-function FavColor(){
-  const [color, setColor] = useState("red");
-  return (
-    <>
-    <h1>MyFavourite color is {color}</h1>
-    <button
-    type='button'
-    onClick={()=>{
-      setColor('blue');
-    }}>
-      Blue
-    </button>
-    </>
+// function FavColor(){
+//   const [color, setColor] = useState("red");
+//   return (
+//     <>
+//     <h1>MyFavourite color is {color}</h1>
+//     <button
+//     type='button'
+//     onClick={()=>{
+//       setColor('blue');
+//     }}>
+//       Blue
+//     </button>
+//     </>
+//   )
+// }
+
+// export default FavColor;
+
+function Car(){
+  const [brand,setBrand] = useState("Mustang");
+  const [model,setModel] = useState(2022);
+  const [color,setColor] = useState('Red');
+  return(
+    <h1>I have {brand} year {model} in {color}!</h1>
+
   )
 }
 
-export default FavColor;
+
+export default Car;
