@@ -133,36 +133,40 @@ import { useState } from 'react';
 
 // export default Car;
 
-function Car(){
-  const [car,setCar] = useState({
-    brand: "Mustang",
-    model: 2022,
-    color: "Red"
-  });
-  // console.log(car.brand);
+// function Car(){
+//   const [car,setCar] = useState({
+//     brand: "Mustang",
+//     model: 2022,
+//     color: "Red"
+//   });
+//   // console.log(car.brand);
 
-  const UpdateColor = ()=>{
-    setCar(
-      previousState =>{
-        return {...previousState,color:"blue"}
-      }
-    )
-  }
+//   const UpdateColor = ()=>{
+//     setCar(
+//       previousState =>{
+//         return {...previousState,color:"blue"}
+//       }
+//     )
+//   }
   
-  return(
-    <>
-    <h1>I have {car.brand} year {car.model} in {car.color}!!</h1>
-    <button
-    type='button'
-    onClick={UpdateColor}
-    >
-      SetBrand
-    </button>
+//   return(
+//     <>
+//     <h1>I have {car.brand} year {car.model} in {car.color}!!</h1>
+//     <button
+//     type='button'
+//     onClick={UpdateColor}
+//     >
+//       SetBrand
+//     </button>
 
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
 
-export default Car;
+// export default Car;
+
+// ClassCode 21-11 button toggle 
+
+
 
