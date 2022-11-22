@@ -168,25 +168,76 @@ import './App.css';
 
 // ClassCode 21-11 button toggle 
 
-import { useState } from "react";
-import { MdRadioButtonUnchecked, MdRadioButtonChecked } from "react-icons/md";
+// import { useState } from "react";
+// import { MdRadioButtonUnchecked, MdRadioButtonChecked } from "react-icons/md";
 
-function App(){
-    const [checked,setChecked] = useState(false);
+// function App(){
+//     const [checked,setChecked] = useState(false);
+//     return(
+//         <div>
+//             <h1>Hello World</h1>
+//             {checked ?( <MdRadioButtonUnchecked 
+//             color='red' cursor={'pointer'}
+//             onClick = { ()=> setChecked(!checked)}/>):(
+//                 <MdRadioButtonChecked 
+//                 color='red' cursor={'pointer'}
+//                 onClick = { ()=> setChecked(!checked)}
+//                 />
+//             )}
+           
+           
+//         </div>
+//     )
+// }
+// export default App;
+
+// import Counter from "./components/counter"
+// function App(){
+//     const [color,setColor] = useState("Blue");
+//     console.log(color);
+//     return(
+//         <div>
+//             <h1>COlor {color}</h1>
+//         <button onClick={()=>setColor("Red")}>Change Color</button>
+//         </div>
+//     )
+    
+//     function App(){
+//         return(
+    //             <div>
+//             <Counter />
+//             <Counter />
+//             <Counter />
+//         </div>
+//     )
+// }
+// export default App;
+
+import { useState } from 'react';
+function NameList(){
+    const [list, setList] = useState(["osama","yasir","sameer"]);
+    const [name,setName] = useState("");
+    function onAddName(){
+        setList([...list,name]);
+        setName("");
+    }
     return(
-        <div>
-            <h1>Hello World</h1>
-            {checked ?( <MdRadioButtonUnchecked 
-            color='red' cursor={'pointer'}
-            onClick = { ()=> setChecked(!checked)}/>):(
-                <MdRadioButtonChecked 
-                color='red' cursor={'pointer'}
-                onClick = { ()=> setChecked(!checked)}
-                />
+        <>
+            <ul>
+
+        {list.map((name)=>(
+            <li key={name}>{name}</li>
+            )
+            
             )}
-           
-           
-        </div>
+            </ul>
+            <input type="text"
+            value={name}
+            onChange = {(e)=> setName(e.target.value)}
+             />
+             <button onClick={onAddName}>Add Name</button>
+        </>
     )
 }
-export default App;
+
+export default NameList;
